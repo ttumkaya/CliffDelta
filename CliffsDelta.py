@@ -1,13 +1,13 @@
 
 # coding: utf-8
 
-# In[36]:
+# In[1]:
 
 
 import numpy as np
 
 # Pass two "LISTS" to the function to calculate the difference in Cliff's delta.
-def cliffDelta(x,y):
+def cliffDelta(x,y,decimals=2):
     lenx = len(x)
     leny = len(y)
     
@@ -24,18 +24,18 @@ def cliffDelta(x,y):
     
     ## get the avarage of the dominance matrix
     delta = matrix.mean()    
-    return delta,matrix
+    return round(delta,decimals),matrix
     
 
 
-# In[39]:
+# In[2]:
 
 
 a = [10,10,20,20,20,30,30,30,40,50]
 b = [10,20,30,40,40,50]
 
 
-# In[40]:
+# In[3]:
 
 
 delta, matrix = cliffDelta(a,b)
