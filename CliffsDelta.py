@@ -23,8 +23,7 @@ def cliffDelta(x,y):
                 matrix[i,j] = -1
     
     ## get the avarage of the dominance matrix
-    delta = matrix.sum() / (lenx * leny)
-    
+    delta = matrix.mean()    
     return delta,matrix
     
 
@@ -32,7 +31,6 @@ def cliffDelta(x,y):
 # In[39]:
 
 
-import random
 a = [10,10,20,20,20,30,30,30,40,50]
 b = [10,20,30,40,40,50]
 
